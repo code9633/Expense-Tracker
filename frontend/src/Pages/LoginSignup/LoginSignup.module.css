@@ -1,0 +1,149 @@
+.bodyContent {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 28em;
+  min-height: 30em;
+  padding: 1.5em 3.7em;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  margin: 0.2em;
+  font-size: 1.7rem;
+}
+
+.title p {
+  color: darkgray;
+  font-size: 0.8rem;
+}
+
+.formContainer {
+  margin-top: 10px;
+  padding-bottom: 25px;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  font-size: 1rem;
+  color: #09637a;
+  margin-bottom: 0.4em;
+}
+
+/* Your existing CSS */
+
+.inputField {
+  height: 35px;
+  margin-bottom: 0.8em;
+  border-radius: 2px;
+  font-size: 15px;
+  border: 2px solid gainsboro;
+  padding-left: 10px;
+  transition: border-color 0.3s ease
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: hsl(var(183 74% 44%));
+  -webkit-box-shadow: 0 0 0 1px hsl(var(183 74% 44%));
+  box-shadow: 0 0 0 1px hsl(var(183 74% 44%));
+}
+
+.inputField:hover {
+  border: 2px solid #0d98ba;
+  transition: 250ms;
+}
+
+.formContainer button {
+  background-color: #0d98ba;
+  height: 50px;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.formContainer span {
+  margin-top: 20px;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(12, 27, 72, 0.4);
+}
+
+.other {
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.other hr {
+  border: 1.5px solid lightgray; /* Change the color as needed */
+}
+
+.other p {
+  background-color: white;
+  align-self: center;
+  margin-top: -9px;
+  padding: 0 10px;
+  color: gray;
+  font-size: 0.8rem;
+}
+
+
+.footerText {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footerText p {
+  font-size: 0.7rem;
+  padding-right: 5px;
+}
+.footerText span {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.outsideText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.outsideText p {
+  font-size: 0.9rem;
+  margin: 8px;
+}
+
+.outsideText a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.outsideText a:hover {
+  color: red;
+}
+
+

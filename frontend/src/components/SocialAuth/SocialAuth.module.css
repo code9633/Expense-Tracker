@@ -1,0 +1,26 @@
+.socialMedia {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .media {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .media:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .media img {
+    width: 20px;
+  }
+  .media p {
+    margin-left: 5px;
+  }
+  

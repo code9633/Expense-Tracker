@@ -1,0 +1,81 @@
+.bodyContent {
+  z-index: 1;
+  display: flex;
+  padding: 5px 60px;
+  flex-wrap: wrap;
+  min-width: 768px;
+}
+
+.textContent {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+.textContent h1 {
+  font-size: 3.5rem;
+}
+
+.textContent span {
+  color: #09637a;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.loggingOptions {
+  margin-top: 20px;
+  padding-left: 4px;
+}
+
+.btn {
+  width: 170px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: rgb(14, 14, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn span {
+  font-size: 0.9rem;
+  padding-right: 5px;
+  color: white;
+}
+
+.icon {
+  font-size: 20px;
+  color: white;
+}
+
+.loggingOptions p {
+  font-size: 0.9rem;
+}
+.loggingOptions a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.loggingOptions a:hover {
+  color: red;
+}
+
+.imgContent {
+  width: 50%;
+  height: auto;
+  padding-top: 50px;
+}
