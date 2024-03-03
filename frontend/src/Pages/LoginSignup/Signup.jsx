@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./LoginSignup.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios"; // use for the http request
+import SocialAuth from "../../components/SocialAuth/SocialAuth";
 
 const Signup = () => {
   const navigate = useNavigate("");
@@ -93,6 +94,7 @@ const Signup = () => {
             <hr />
             <p>Or sign up with</p>
           </div>
+
           {/* component/SocialAuth  -> Authentiation from using social media */}
           <SocialAuth/>
 

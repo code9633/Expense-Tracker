@@ -6,8 +6,7 @@ import Main from "./Layout/Main";
 import Error from "./Pages/Error/Error";
 import Signup from "./Pages/LoginSignup/Signup";
 import Login from "./Pages/LoginSignup/Login";
-
-
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -32,18 +31,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Login />,
+        element: <Dashboard />,
         errorElement: <Error />,
       },
     ],
   },
+  
 ]);
 function App() {
-  return (
-  <RouterProvider router={router} />
-  
-  );
-  
+  return <RouterProvider router={router} />;
 }
 
 export default App;

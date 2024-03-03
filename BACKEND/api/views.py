@@ -6,8 +6,6 @@ from .serializers import UserSerializer
 from .models import CustomUser
 import json
 
-
-
 @csrf_exempt
 def register(request):
     if request.method == 'POST':
@@ -35,7 +33,7 @@ def userLogin(request):
 
         if user is not None:
             login(request, user)
-            return JsonResponse({"succes" : "Login successfull"})
+            return JsonResponse({"success" : "Login successfull", "userName" : user.name})
 
         else :
             return JsonResponse({'error' : "Invalid email or password"}, status = 400)

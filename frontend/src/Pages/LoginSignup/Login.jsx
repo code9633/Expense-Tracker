@@ -10,29 +10,29 @@ const Login = () => {
   const navigate = useNavigate("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(null);
+  const [errors, setErrors] = useState(false);
 
   const handelLogin = async (e) => {
     e.preventDefault();
-    setErrors(null);
+    setErrors(false);
 
     try {
       const response = await axios.post("http://127.0.0.1:8000/api/login", {
         email,
         password,
       });
-      setSuccessMessage(response.data.success);
+
+      localStorage.setItem("user",response.data.userName);
+      localStorage.setItem("message", response.data.success)
+      
       navigate("/dashboard");
-
     } catch (error) {
-      if (error.response.data.error) {
-        handleToastifyMessage("warn", error.response.data.error)
-        setErrors(error.response.data.error);
-
+      if (error) {
+        handleToastifyMessage("warn", error.response.data.error);
+        setErrors(true);
       } else {
-        handleToastifyMessage("error", `An unexpected error occured, ${error}`)
-        setErrors("An unexpected error occured");
+        handleToastifyMessage("error", `An unexpected error occured, ${error}`);
+        setErrors(true);
       }
     }
   };
@@ -91,7 +91,7 @@ const Login = () => {
             </div>
 
             {/* component/SocialAuth  -> Authentiation from using social media */}
-            <SocialAuth/>
+            <SocialAuth />
 
             <div className={styles.footerText}>
               <p>By signing up I accept Compyant</p>
@@ -105,7 +105,6 @@ const Login = () => {
           </p>
         </div>
       </div>
-   
     </>
   );
 };

@@ -146,4 +146,6 @@
   color: red;
 }
 
-
+.error{
+  border-color: rgb(236, 130, 130) !important ;
+}
