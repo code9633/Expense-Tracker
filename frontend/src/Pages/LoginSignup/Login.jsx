@@ -13,6 +13,7 @@ const Login = () => {
   const [errors, setErrors] = useState(false);
 
   const handelLogin = async (e) => {
+
     e.preventDefault();
     setErrors(false);
 
@@ -22,10 +23,13 @@ const Login = () => {
         password,
       });
 
-      localStorage.setItem("user",response.data.userName);
-      localStorage.setItem("message", response.data.success)
+      console.log(response)
+
+      localStorage.setItem("user", response.data.userName);
+      localStorage.setItem("message", response.data.success);
+
+        navigate("/dashboard");
       
-      navigate("/dashboard");
     } catch (error) {
       if (error) {
         handleToastifyMessage("warn", error.response.data.error);
